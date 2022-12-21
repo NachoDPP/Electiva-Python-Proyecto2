@@ -17,6 +17,6 @@ class TrackModel(Base):
     unit_price = Column(Float(10,2), name='UnitPrice')
     
     # ORM Relationship
-    album = relationship("Albums")
-    genre = relationship("Genres")
-    media_type = relationship("MediaTypes")
+    album = relationship("AlbumModel")
+    genre = relationship("GenreModel")
+    media_type = relationship("MediaTypeModel")
