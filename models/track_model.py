@@ -1,6 +1,11 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import relationship
 
+# ORM Relationship
+from models.album_model import AlbumModel
+from models.genre_model import GenreModel
+from models.media_type_model import MediaTypeModel
+
 from config_db import Base
 
 class TrackModel(Base):

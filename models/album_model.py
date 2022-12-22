@@ -1,6 +1,9 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
+# ORM Relationship
+from models.artist_model import ArtistModel
+
 from config_db import Base
 
 class AlbumModel(Base):
