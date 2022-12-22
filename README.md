@@ -22,6 +22,25 @@
 # Electiva-Python-Proyecto2 - Manuel Da Pena
 Proyecto Práctico 2 de la materia electiva Programación con Python de Ingeniería Informática en la Universidad Católica Andrés Bello.
 
+## Instalación
+
+```bash
+# Entorno virtual
+$ python -m venv env
+
+# Activación de entorno
+$ env\Scripts\activate
+
+# Dependencias
+$ pip install -r requirements.txt
+```
+## Ejecutando la aplicación
+
+```bash
+# Dominio & Puerto: http://localhost:8000
+$ uvicorn main:app --reload
+```
+
 ## Descripción
 
 Utilizando la base de datos de demostración que tiene SQLite, la cual contiene datos de una 
