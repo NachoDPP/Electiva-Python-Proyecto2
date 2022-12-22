@@ -29,11 +29,11 @@ incluyendo el nombre del género musical y el nombre del tipo de media donde est
 localizado.
 
 - Los nombres de los endpoints DEBEN SER LOS SIGUIENTES:
-  -  music-store/api/v1/singers/ -> lista total de artistas
-  -  music-store/api/v1/singers/{id}/ -> lista de álbumes de un artista
-  -  music-store/api/v1/albums/{id}/ -> lista de canciones del álbum de un artista
-  -  music-store/api/v1/singer/{id}/ -> lista total de canciones de un artista
-  -  music-store/api/v1/song/{id}/ -> detalle de una canción por su id
+  -  **music-store/api/v1/singers/** -> lista total de artistas
+  -  **music-store/api/v1/singers/{id}/** -> lista de álbumes de un artista
+  -  **music-store/api/v1/albums/{id}/** -> lista de canciones del álbum de un artista
+  -  **music-store/api/v1/singer/{id}/** -> lista total de canciones de un artista
+  -  **music-store/api/v1/song/{id}/** -> detalle de una canción por su id
 
 - Los nombres de los endpoints DEBEN SER LOS SIGUIENTES:
 
