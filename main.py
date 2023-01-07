@@ -11,7 +11,7 @@ def get_application():
     Base.metadata.create_all(bind=engine)
 
     # Creamos la aplicación de fastAPI
-    app = FastAPI(title="Proyecto 2 - Music Store", version="1.0.0", description="Manuel Da Pena")
+    app = FastAPI(title="Proyecto 2 - Manuel Da Pena", version="1.0.0", description="Music Store API")
 
     # Habilitamos CORS
     app.add_middleware(
@@ -23,7 +23,7 @@ def get_application():
     )
 
     # Incluimos los Routers
-    app.include_router(music_router, prefix="/music-store/api/v1")
+    app.include_router(music_router, prefix="/music-store/api/v1", tags=["Music Store Routes"])
 
     return app
 
