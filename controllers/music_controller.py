@@ -12,7 +12,7 @@ from schemas.track_schemas import TrackInDB
 
 router = APIRouter()
 
-@router.get("/singers", response_model=List[ArtistInDB], status_code=status.HTTP_200_OK, name="get-all-singers")
+@router.get("/singers/", response_model=List[ArtistInDB], status_code=status.HTTP_200_OK, name="get-all-singers")
 async def get_all_artists(db: Session = Depends(get_db), singer_repository: SingerRepository = Depends(get_singer_repository)) -> List[ArtistInDB]:
     """Lista de todos los artistas"""
 
@@ -21,7 +21,7 @@ async def get_all_artists(db: Session = Depends(get_db), singer_repository: Sing
     return singers
 
 
-@router.get("/singers/{id}", response_model=List[AlbumInDB], status_code=status.HTTP_200_OK, name="get-all-albums-by-singers")
+@router.get("/singers/{id}/", response_model=List[AlbumInDB], status_code=status.HTTP_200_OK, name="get-all-albums-by-singers")
 async def get_all_albums_by_singer(id: int, db: Session = Depends(get_db), album_repository: AlbumRepository = Depends(get_album_repository)) -> List[AlbumInDB]:
     """Lista de álbumes de un artista"""
 
@@ -34,7 +34,7 @@ async def get_all_albums_by_singer(id: int, db: Session = Depends(get_db), album
     return albums
 
 
-@router.get("/albums/{id}", response_model=List[TrackInDB], status_code=status.HTTP_200_OK, name="get-all-tracks-by-album")
+@router.get("/albums/{id}/", response_model=List[TrackInDB], status_code=status.HTTP_200_OK, name="get-all-tracks-by-album")
 async def get_all_tracks_by_album(id: int, db: Session = Depends(get_db), track_repository: TrackRepository = Depends(get_track_repository)) -> List[TrackInDB]:
     """Lista de canciones de un álbum en particular"""
 
@@ -47,7 +47,7 @@ async def get_all_tracks_by_album(id: int, db: Session = Depends(get_db), track_
     return tracks
 
 
-@router.get("/singer/{id}", response_model=List[TrackInDB], status_code=status.HTTP_200_OK, name="get-all-tracks-by-artist")
+@router.get("/singer/{id}/", response_model=List[TrackInDB], status_code=status.HTTP_200_OK, name="get-all-tracks-by-artist")
 async def get_all_tracks_by_artist(id: int, db: Session = Depends(get_db), track_repository: TrackRepository = Depends(get_track_repository)) -> List[TrackInDB]:
     """Lista de todas las canciones de un artista en particular"""
 
@@ -60,7 +60,7 @@ async def get_all_tracks_by_artist(id: int, db: Session = Depends(get_db), track
     return tracks
 
 
-@router.get("/song/{id}", response_model=TrackInDB, status_code=status.HTTP_200_OK, name="get-track-detail")
+@router.get("/song/{id}/", response_model=TrackInDB, status_code=status.HTTP_200_OK, name="get-track-detail")
 async def get_all_tracks_by_artist(id: int, db: Session = Depends(get_db), track_repository: TrackRepository = Depends(get_track_repository)) -> TrackInDB:
     """Detalle completo de una canción en particular"""
 
